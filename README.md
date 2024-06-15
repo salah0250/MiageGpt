@@ -1,3 +1,14 @@
+# Table of Contents
+
+- [MiageGPT](#miagegpt)
+- [Key Implemented Features](#key-implemented-features)
+- [Other Features](#other-features)
+- [Technologies Used](#technologies-used)
+- [How to Use Commands](#how-to-use-commands)
+- [Demo](#demo)
+
+---
+
 # MiageGPT
 
 MiageGPT is an innovative project designed to provide an interactive experience based on artificial intelligence. This versatile system acts both as an interactive chat and as an assistant dedicated to MIAGE Nice Sophia Antipolis. It integrates advanced features such as image recognition, voice assistant, and speech synthesis to meet the varied needs of its users.
@@ -28,4 +39,14 @@ MiageGPT is an innovative project designed to provide an interactive experience 
 
 MiageGPT is built with modern web technologies, including HTML and CSS for the user interface, JavaScript for client-side logic, and Node.js with Express for the backend. It integrates OpenAI APIs for text and image generation, offering advanced natural language processing and computer vision capabilities.
 
+## How to Use Commands:
 
+To use MiageGPT, start by typing `/` in the input field, then choose from the available commands by clicking on one of the options provided:
+
+- **Image Search:** Click on `image` to generate images based on a description.
+- **Voice Interaction:** Click on `speech` to activate voice input and dictate your message.
+- **MIAGE Assistant:** Click on `assistant` to ask specific questions about MIAGE Nice Sophia Antipolis.
+
+## Demo
+
+Explore a demo of MiageGPT [here](https://unice-my.sharepoint.com/:v:/g/personal/salah-eddine_aboulkacim_etu_unice_fr/EeS0Zejq0F9Jmve5sZbK1J0Bd9OIca7MaZ-zxcoOS1wV7w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dRMasa).
