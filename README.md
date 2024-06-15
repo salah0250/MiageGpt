@@ -53,6 +53,9 @@ To use MiageGPT, start by typing `/` in the input field, then choose from the av
 
 Explore a demo of MiageGPT [here](https://unice-my.sharepoint.com/:v:/g/personal/salah-eddine_aboulkacim_etu_unice_fr/EeS0Zejq0F9Jmve5sZbK1J0Bd9OIca7MaZ-zxcoOS1wV7w?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dRMasa).
 
+## Team Members
+
+
 The development of MiageGPT is led by the following team members:
 
 - **Aboulkacim Salah Eddine** 
