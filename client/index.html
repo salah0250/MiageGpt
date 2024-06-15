@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MiageGPT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/sendRequestToServer.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section class="side-bar" id="side-bar">
+        <button id="new-chat">New chat</button>
+        <nav>
+            <p>Made by A.G.B</p>
+        </nav>
+    </section>
+    <section class="main" id="main">
+        <div class="logo-container">
+            <img src="UCA-Logo-2niveaux-RVB.png" alt="MiageGPT Logo">
+        </div>
+        <div id="output"></div>
+        <section class="main" id="main">
+            <div id="output"></div>
+            <div id="initial-buttons" class="initial-buttons"></div>
+            <div class="bottom-section">
+                <div class="input-container">
+                    <button id="voice-button">
+                        <i class="fa-solid fa-microphone"></i>
+                    </button>
+                    <input id="user-input" type="text" placeholder="Type something...">
+                    <div id="suggestion-container" class="suggestion-container"></div>
+                    <button id="submit">➢</button>
+                </div>
+            </div>
+            <p class="info">IA chat</p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh; /* Assure que le corps prend au moins toute la hauteur de la fenêtre */
+    position: relative; /* Nécessaire pour le positionnement des éléments absolus/fixes */
+}
+
+/* Side bar styles */
+.side-bar {
+    position: fixed; /* Fixe la sidebar */
+    top: 0;
+    left: 0;
+    background-color: #181818;
+    width: 244px;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1; /* Assure que la sidebar est au-dessus du contenu principal */
+}
+
+/* Main section styles */
+.main {
+    margin-left: 244px; /* Laisse de l'espace pour la sidebar fixe */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1; /* Prend l'espace restant */
+    padding: 20px;
+    overflow: auto; /* Ajoute un défilement pour le contenu principal */
+    position: relative; /* Assure que le contenu principal peut être empilé au-dessus de la sidebar */
+    z-index: 0; /* Le contenu principal doit être en-dessous de la sidebar */
+}
+
+/* Chat output styles */
+#output {
+    width: 100%;
+    max-width: 650px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.user-message {
+    background-color: #676767;
+    color: white;
+    align-self: flex-start;
+}
+
+.assistant-message {
+    background-color: #424242;
+    color: rgb(255, 255, 255);
+    align-self: flex-end;
+}
+
+.image-container {
+    align-self: flex-start;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgb(36, 37, 38) 0 20px 30px -10px;
+}
+
+/* Bottom section styles */
+.bottom-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 110px;
+    width: 100%;
+    background-color: #2f2f2f;
+    z-index: 100; /* Assure qu'il est au-dessus du contenu principal */
+    padding: 10px;
+}
+
+.input-container {
+    width: calc(100% - 40px); /* Largeur ajustée pour s'adapter au padding de .bottom-section */
+    max-width: 650px;
+    display: flex;
+    margin: 0 auto; /* Centré horizontalement */
+    padding: 10px;
+    background-color: rgba(47, 47, 47, 0.9); /* Couleur de fond légèrement transparente */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Bordure supérieure */
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+        background-color: #424242;
+
+}
+
+#submit {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #0b93f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   width: 8px;
+}
+
+.info {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11px;
+    padding: 10px;
+}
+
+/* Styles additionnels pour sidebar et boutons */
+button, nav, .history {
+    border: solid 0.5px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Ajoute une transition pour un effet plus doux */
+
+}
+button:hover, nav:hover, .history:hover {
+    background-color: #474747; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+.history p {
+    cursor: pointer;
+}
+.initial-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+.suggestion-container {
+    display: none;
+    position: absolute;
+    bottom: 70px; /* Adjust this value to ensure suggestions are above the input */
+    left: 490px;
+    width: calc(30% - 40px); /* Adjust the width to fit the input width */
+    background-color: #2f2f2f;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 150px; /* Add a maximum height */
+    overflow-y: auto; /* Enable scrolling if there are too many suggestions */
+    font-size: 12px; /* Make the text smaller */
+}
+
+.suggestion-item {
+    padding: 8px; /* Make the padding smaller */
+    cursor: pointer;
+    border-bottom: 1px solid #ddd; /* Add a bottom border to each item for separation */
+}
+
+.suggestion-item:hover {
+    background-color: #555555;
+}
+
+.initial-buttons button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column; /* Arrange icon and text in a column */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Ajoute une transition pour un effet plus doux */
+
+}
+.initial-buttons button:hover {
+    background-color: #404040; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+.initial-buttons button span {
+    margin-bottom: 5px; /* Space between icon and text */
+}
+.initial-buttons button img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+#voice-button {
+    padding: 10px;
+    background-color: #0b93f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align icon vertically */
+}
+
+#voice-button i {
+    font-size: 16px; /* Adjust icon size as needed */
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: #0b93f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align text vertically */
+}
+.logo-container {
+    padding: 20px 0; /* Ajouter un peu d'espacement autour du logo */
+    position: fixed;
+}
+
+.logo-container img {
+    width: 150px; /* Ajuster la largeur du logo */
+    height: auto; /* Permettre à la hauteur de s'ajuster automatiquement en conservant les proportions */
+    border-radius: 50%; /* Appliquer une bordure arrondie (50% pour un cercle si l'image est carrée) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajouter une légère ombre portée */
+}
+.input-container {
+    width: calc(100% - 40px); /* Adjust padding and margin as needed */
+    max-width: 650px;
+    display: flex;
+    margin: 0 auto; /* Center horizontally */
+    padding: 10px;
+    background-color: rgba(47, 47, 47, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+input#user-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    background-color: #424242;
+}
+/* Add this to your CSS file */
+.button-clicked {
+    background-color: #797a79; /* Green background */
+    color: white; /* White text */
+}
